@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .weather-app {
+    background: #121212;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .top-section {
+    text-align: center;
+  }
+  
+  .temperature {
+    font-size: 48px;
+    margin: 10px 0;
+  }
+  
+  .weather-icon {
+    font-size: 36px;
+  }
+  
+  .forecast {
+    margin-top: 20px;
+  }
+  
+  .forecast-toggle {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-toggle button {
+    background: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .forecast-days {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .day {
+    background: #1f1f1f;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+  }
