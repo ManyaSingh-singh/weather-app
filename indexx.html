@@ -5,47 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="weather-app">
-    <div class="top-section">
-      <h2>Greater Noida, knowledge park</h2>
-      <div class="temperature">38°</div>
-      <div class="weather-icon">⛈</div>
-    </div>
-    
-    <div class="forecast">
-      <div class="forecast-toggle">
-        <button>DAY / WEEK</button>
+  <div class="container">
+    <header>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for places ...">
+        <button class="refresh-btn">⟳</button>
       </div>
-      <div class="forecast-days">
-        <div class="day">
-          <div>Sun</div>
-          <div></div>
-          <div>29°</div>
+      <div class="unit-toggle">
+        <button class="active">°C</button>
+        <button>°F</button>
+        <div class="profile-pic"></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="current-weather">
+        <div class="weather-icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="partly cloudy">
         </div>
-        <div class="day">
-          <div>Mon</div>
-          <div></div>
-          <div>31°</div>
+        <div class="temperature">12°C</div>
+        <div class="date">Monday, 16:00</div>
+        <div class="weather-condition">
+          <span class="condition">Mostly Cloudy</span>
+          <span class="rain-chance">Rain - 30%</span>
         </div>
-        <div class="day">
-          <div>Tue</div>
-          <div></div>
-          <div>30°</div>
-        </div>
-        <div class="day">
-          <div>Wed</div>
-          <div></div>
-          <div>30°</div>
-        </div>
-        <div class="day">
-          <div>Thu</div>
-          <div></div>
-          <div>29°</div>
+        <div class="location">
+          <img src="https://source.unsplash.com/400x100/?new-york-city" alt="New York" class="city-image">
+          <span>New York, NY, USA</span>
         </div>
       </div>
-    </div>
+
+      <div class="forecast-section">
+        <div class="toggle-view">
+          <button class="today active">Today</button>
+          <button class="week">Week</button>
+        </div>
+
+        <div class="weekly-forecast">
+          <div class="day">
+            <span>Sun</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="sunny">
+            <span>15°</span>
+          </div>
+          <div class="day">
+            <span>Mon</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="partly cloudy">
+            <span>12°</span>
+          </div>
+          <div class="day">
+            <span>Tue</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="cloudy">
+            <span>9°</span>
+          </div>
+          <div class="day">
+            <span>Wed</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="rain">
+            <span>8°</span>
+          </div>
+          <div class="day">
+            <span>Thu</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/2675/2675897.png" alt="snow">
+            <span>5°</span>
+          </div>
+          <div class="day">
+            <span>Fri</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="sunny">
+            <span>4°</span>
+          </div>
+          <div class="day">
+            <span>Sat</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="sunny">
+            <span>3°</span>
+          </div>
+        </div>
+
+        <h2>Today's Highlights</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <h3>UV Index</h3>
+            <div class="uv-meter">
+              <div class="uv-value">5</div>
+              <div class="uv-gauge"></div>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Wind Status</h3>
+            <div class="wind-status">
+              <div class="wind-speed">7.70</div>
+              <span>km/h</span>
+              <div class="wind-direction">WSW</div>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Sunrise & Sunset</h3>
+            <div class="sun-times">
+              <div class="sunrise">
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="sunrise">
+                <span>6:35 AM</span>
+              </div>
+              <div class="sunset">
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="sunset">
+                <span>5:42 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Humidity</h3>
+            <div class="humidity-status">
+              <div class="humidity-value">12%</div>
+              <span class="status">Normal</span>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Visibility</h3>
+            <div class="visibility-status">
+              <div class="visibility-value">5.2</div>
+              <span>km</span>
+              <span class="status">Average</span>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Air Quality</h3>
+            <div class="air-quality-status">
+              <div class="aqi-value">105</div>
+              <span class="status">Unhealthy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
